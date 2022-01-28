@@ -1,0 +1,15 @@
+.novice_logo {
+    font-family: 'Nunito', sans-serif;
+}
+
+.novice_footer_button {
+    font-size: .6rem;
+}
+
+.novice_footer {
+    text-align:center;margin-top:2rem;
+}
+
+.novice_header {
+    text-align:center; margin: 2rem 0;
+}

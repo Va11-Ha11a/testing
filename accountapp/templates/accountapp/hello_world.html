@@ -2,31 +2,17 @@
 
 {% block content %}
 
-    <style>
-        .testing{
-            background-color: white;
-            height: 3rem;
-            width: 3rem;
-            margin: 1rem;
-            <!--1rem = 16px-->
-        }
-    </style>
-
     <div style="height: 20rem; background-color: #38df81; border-radius: 1rem; margin: 2rem">
 
         <h1>
             right on testing
         </h1>
 
-        <div class="testing" style="display: block">block</div>
-        <div class="testing" style="display: inline">inline</div>
-        <span style="height: 3rem;
-                width: 3rem;">
-            꼽싸리
-        </span>
-        <div class="testing" style="display: None">None</div>
-        <div class="testing" style="display: inline-block">inline-block</div>
-        <div class="testing">default</div>
+        <form action="/accountapp/hello_wolrd/" method="post">
+            {% csrf_token %}
+<!--            장고에서 제공하는 보안 기능 중 하나인 csrf 토큰-->
+            <input type="submit" class="btn btn-primary" value="POST">
+        </form>
 
     </div>
 

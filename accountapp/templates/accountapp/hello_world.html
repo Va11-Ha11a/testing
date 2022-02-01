@@ -8,11 +8,16 @@
             right on testing
         </h1>
 
-        <form action="/accountapp/hello_wolrd/" method="post">
+        <form action="/account/hello_world/" method="post">
             {% csrf_token %}
 <!--            장고에서 제공하는 보안 기능 중 하나인 csrf 토큰-->
-            <input type="submit" class="btn btn-primary" value="POST">
+            <input type="submit" class="btn btn-primary" value="yes!">
         </form>
+
+        <h1>
+            {{ text }}
+
+        </h1>
 
     </div>
 

@@ -2,22 +2,30 @@
 
 {% block content %}
 
-    <div style="height: 20rem; background-color: #38df81; border-radius: 1rem; margin: 2rem">
+    <div style="border-radius: 1rem; margin: 2rem; text-align: center">
 
-        <h1>
-            right on testing
+        <h1 style="font-family: 'Kirang Haerang', cursive;">
+            Cool Welsh Corgi
         </h1>
 
         <form action="/account/hello_world/" method="post">
             {% csrf_token %}
 <!--            장고에서 제공하는 보안 기능 중 하나인 csrf 토큰-->
-            <input type="submit" class="btn btn-primary" value="yes!">
+
+            <div>
+                <input type="text" name="doggo_input">
+            </div>
+
+            <div>
+                <input type="submit" class="btn btn-primary" value="yes!">
+            </div>
         </form>
 
+        {% if corgi_output %}
         <h1>
-            {{ text }}
-
+            {{ corgi_output.text }}
         </h1>
+        {% endif %}
 
     </div>
 

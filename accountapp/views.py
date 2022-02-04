@@ -15,7 +15,7 @@ def hello_world(request):
         welsh_corgi.text = temp
         welsh_corgi.save()
 
-        return render(request, 'accountapp/hello_world.html', context={'corgi_output': welsh_corgi})
-
+        return HttpResponseRedirect(reverse('accountapp:hello_world'))
     else:
-        return render(request, 'accountapp/hello_world.html', context={'text': 'Do U like doggo?'})
+        Corgi_list = Corgi.objects.all()
+        return render(request, 'accountapp/hello_world.html', context={'corgi_list': Corgi_list})

@@ -21,11 +21,12 @@
             </div>
         </form>
 
-        {% if corgi_output %}
-        <h1>
-            {{ corgi_output.text }}
-        </h1>
-        {% endif %}
+        {% for Corgi_list %}
+            {% for Corgi in Corgi_list %}
+        <h4>
+            {{ Corgi_list.text }}
+        </h4>
+        {% endfor %}
 
     </div>
 
